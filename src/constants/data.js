@@ -1,0 +1,305 @@
+export const LANGUAGE_VERSIONS = {
+    javascript: "18.15.0",
+    typescript: "5.0.3",
+    python: "3.10.0",
+    java: " 15.0.2",
+    csharp: "6.12.0",
+    php: "8.2.3",
+}
+export const CODE_SNIPPETS = {
+    1: {
+        javascript: `
+function twoSum(nums, target) {
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] === target) {
+                return [i, j];
+            }
+        }
+    }
+    return [];
+}
+
+console.log(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
+`,
+        typescript: `
+type Params = {
+    nums: number[];
+    target: number;
+}
+
+function twoSum(data: Params): number[] {
+    const { nums, target } = data;
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] === target) {
+                return [i, j];
+            }
+        }
+    }
+    return [];
+}
+
+console.log(twoSum({ nums: [2, 7, 11, 15], target: 9 })); // Output: [0, 1]
+`,
+        python: `
+def two_sum(nums, target):
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return [i, j]
+    return []
+
+print(two_sum([2, 7, 11, 15], 9)) # Output: [0, 1]
+`,
+        java: `
+import java.util.*;
+
+public class TwoSum {
+    public static int[] twoSum(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target) {
+                    return new int[]{i, j};
+                }
+            }
+        }
+        return new int[]{};
+    }
+
+    public static void main(String[] args) {
+        int[] result = twoSum(new int[]{2, 7, 11, 15}, 9);
+        System.out.println(Arrays.toString(result)); // Output: [0, 1]
+    }
+}
+`,
+        csharp: `
+using System;
+
+namespace TwoSumApp {
+    class Program {
+        static int[] TwoSum(int[] nums, int target) {
+            for (int i = 0; i < nums.Length; i++) {
+                for (int j = i + 1; j < nums.Length; j++) {
+                    if (nums[i] + nums[j] == target) {
+                        return new int[] { i, j };
+                    }
+                }
+            }
+            return new int[] { };
+        }
+
+        static void Main(string[] args) {
+            int[] result = TwoSum(new int[] { 2, 7, 11, 15 }, 9);
+            Console.WriteLine(string.Join(",", result)); // Output: [0, 1]
+        }
+    }
+}
+`,
+        php: `
+<?php
+
+function twoSum($nums, $target) {
+    for ($i = 0; $i < count($nums); $i++) {
+        for ($j = $i + 1; $j < count($nums); $j++) {
+            if ($nums[$i] + $nums[$j] == $target) {
+                return [$i, $j];
+            }
+        }
+    }
+    return [];
+}
+
+print_r(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
+
+?>
+`,
+    },
+    2: {
+        javascript: `
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+console.log(reverseString("hello")); // Output: "olleh"
+`,
+        typescript: `
+function reverseString(str: string): string {
+    return str.split('').reverse().join('');
+}
+
+console.log(reverseString("hello")); // Output: "olleh"
+`,
+        python: `
+def reverse_string(s):
+    return s[::-1]
+
+print(reverse_string("hello")) # Output: "olleh"
+`,
+        java: `
+public class ReverseString {
+    public static String reverseString(String s) {
+        return new StringBuilder(s).reverse().toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(reverseString("hello")); // Output: "olleh"
+    }
+}
+`,
+        csharp: `
+using System;
+
+namespace ReverseStringApp {
+    class Program {
+        static string ReverseString(string s) {
+            char[] charArray = s.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
+
+        static void Main(string[] args) {
+            Console.WriteLine(ReverseString("hello")); // Output: "olleh"
+        }
+    }
+}
+`,
+        php: `
+<?php
+
+function reverseString($str) {
+    return strrev($str);
+}
+
+echo reverseString("hello"); // Output: "olleh"
+
+?>
+`,
+    },
+    3: {
+        javascript: `
+function sortArray(arr) {
+    return arr.sort((a, b) => a - b);
+}
+
+console.log(sortArray([5, 3, 8, 4, 2])); // Output: [2, 3, 4, 5, 8]
+`,
+        typescript: `
+function sortArray(arr: number[]): number[] {
+    return arr.sort((a, b) => a - b);
+}
+
+console.log(sortArray([5, 3, 8, 4, 2])); // Output: [2, 3, 4, 5, 8]
+`,
+        python: `
+def sort_array(arr):
+    return sorted(arr)
+
+print(sort_array([5, 3, 8, 4, 2])) # Output: [2, 3, 4, 5, 8]
+`,
+        java: `
+import java.util.Arrays;
+
+public class SortArray {
+    public static int[] sortArray(int[] arr) {
+        Arrays.sort(arr);
+        return arr;
+    }
+
+    public static void main(String[] args) {
+        int[] result = sortArray(new int[]{5, 3, 8, 4, 2});
+        System.out.println(Arrays.toString(result)); // Output: [2, 3, 4, 5, 8]
+    }
+}
+`,
+        csharp: `
+using System;
+using System.Linq;
+
+namespace SortArrayApp {
+    class Program {
+        static int[] SortArray(int[] arr) {
+            Array.Sort(arr);
+            return arr;
+        }
+
+        static void Main(string[] args) {
+            int[] result = SortArray(new int[] { 5, 3, 8, 4, 2 });
+            Console.WriteLine(string.Join(",", result)); // Output: [2, 3, 4, 5, 8]
+        }
+    }
+}
+`,
+        php: `
+<?php
+
+function sortArray($arr) {
+    sort($arr);
+    return $arr;
+}
+
+print_r(sortArray([5, 3, 8, 4, 2])); // Output: [2, 3, 4, 5, 8]
+
+?>
+`,
+    },
+    4: {
+        javascript: `
+function greet(name) {
+    console.log("Hello, " + name + "!");
+}
+
+greet("Alex"); // Output: "Hello, Alex!"
+`,
+        typescript: `
+type Params = {
+    name: string;
+}
+
+function greet(data: Params) {
+    console.log("Hello, " + data.name + "!");
+}
+
+greet({ name: "Alex" }); // Output: "Hello, Alex!"
+`,
+        python: `
+def greet(name):
+    print("Hello, " + name + "!")
+
+greet("Alex") # Output: "Hello, Alex!"
+`,
+        java: `
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, Alex!"); // Fixed Output: "Hello, Alex!"
+    }
+}
+`,
+        csharp: `
+using System;
+
+namespace HelloWorld {
+    class Hello {
+        static void Main(string[] args) {
+            Console.WriteLine("Hello, Alex!"); // Fixed Output: "Hello, Alex!"
+        }
+    }
+}
+`,
+        php: `
+<?php
+
+$name = 'Alex';
+echo "Hello, " . $name . "!"; // Fixed Output: "Hello, Alex!"
+
+?>
+`,
+    },
+}
+
+export const questions = [
+    { id: 1, title: 'Two sum' },
+    { id: 2, title: 'reverse string' },
+    { id: 3, title: 'Sort the array' },
+    { id: 4, title: 'Fix the Code' }
+]

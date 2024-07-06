@@ -1,9 +1,14 @@
 import React from 'react'
 
-export default function explore() {
+function Explore() {
     return (
         <div>
+        <h2> hello</h2>
             EXPLORE PAGE
         </div>
     )
 }
+
+export default Explore
+
+

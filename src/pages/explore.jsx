@@ -1,10 +1,15 @@
 import React from 'react'
+import Navbar from '../components/shared/explore/navbar'
+import Header from '../components/shared/explore/heading'
+import Body from '../components/shared/explore/body'
+
 
 function Explore() {
     return (
         <div>
-        <h2> hello</h2>
-            EXPLORE PAGE
+            <Navbar/>
+            <Header/>
+            <Body/>
         </div>
     )
 }

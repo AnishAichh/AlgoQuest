@@ -299,8 +299,105 @@ echo "Hello, " . $name . "!"; // Fixed Output: "Hello, Alex!"
 
 import img from '../assets/problems-img/image.png'
 export const questions = [
+<<<<<<< HEAD
     { id: 1, title: 'Two sum', solution: { img }, acceptance: "57.7%", difficulty: "Easy" },
     { id: 2, title: 'reverse string', solution: { img }, acceptance: "57.7%", difficulty: "Medium" },
     { id: 3, title: 'Sort the array', solution: { img }, acceptance: "57.7%", difficulty: "Easy" },
     { id: 4, title: 'Fix the Code', solution: { img }, acceptance: "57.7%", difficulty: "Hard" }
+=======
+    { id: 1, title: 'Two sum' },
+    { id: 2, title: 'reverse string' },
+    { id: 3, title: 'Sort the array' },
+    { id: 4, title: 'Fix the Code' }
+]
+
+
+
+import icon1 from '../assets/card1_img1.jpg'
+import icon2 from '../assets/card1_img2.png'
+import icon3 from '../assets/card1_img3.jpg'
+import icon4 from '../assets/card1_img4.png'
+
+export const CardData1 = [
+    {
+        id: 1, 
+        title: "HTML and CSS", 
+        img: icon1, 
+        link:"https://www.youtube.com/watch?v=mU6anWqZJcc"
+    },
+    {
+        id: 2, 
+        title: "JavaScript", 
+        img: icon2, 
+        link:"https://www.youtube.com/watch?v=W6NZfCO5SIk"
+    },
+    {
+        id: 3, 
+        title: "Frontend Framework (React)", 
+        img: icon3, 
+        link:"https://www.youtube.com/watch?v=w7ejDZ8SWv8"
+    },
+    {
+        id: 4, 
+        title: "Backend Development (Node.js)", 
+        img: icon4, 
+        link:"https://www.youtube.com/watch?v=RLtyhwFtXQA"
+    }
+
+]
+
+export const CardData2 = [
+    {
+        id: 1, 
+        title: "", 
+        img:"", 
+        link:""
+    },
+    {
+        id: 2, 
+        title: "", 
+        img:"", 
+        link:""
+    },
+    {
+        id: 3, 
+        title: "", 
+        img:"", 
+        link:""
+    },
+    {
+        id: 4, 
+        title: "", 
+        img:"", 
+        link:""
+    }
+
+]
+export const CardData3 = [
+    {
+        id: 1, 
+        title: "", 
+        img:"", 
+        link:""
+    },
+    {
+        id: 2, 
+        title: "", 
+        img:"", 
+        link:""
+    },
+    {
+        id: 3, 
+        title: "", 
+        img:"", 
+        link:""
+    },
+    {
+        id: 4, 
+        title: "", 
+        img:"", 
+        link:""
+    }
+
+>>>>>>> 16514da18809205c338df0c79fe5c387f79963af
 ]

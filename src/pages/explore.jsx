@@ -1,9 +1,19 @@
 import React from 'react'
+import Navbar from '../components/shared/explore/navbar'
+import Header from '../components/shared/explore/heading'
+import Body from '../components/shared/explore/body'
 
-export default function explore() {
+
+function Explore() {
     return (
-        <div>
-            EXPLORE PAGE
+        <div className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>
+            <Navbar/>
+            <Header/>
+            <Body/>
         </div>
     )
 }
+
+export default Explore
+
+

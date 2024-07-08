@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Compiler from "./pages/compiler"
 import Problem from "./pages/problem"
 import Registration from "./pages/registration"
+import About from "./pages/about"
 import Explore from "./pages/explore"
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
         <Routes>
           <Route path="/problem" element={<Problem />} />
           <Route path="/compiler/:questionId" Component={Compiler} />
-          <Route path="/register" element={<Registration/>} />
-          <Route path="/explore" element={<Explore/>} />
+          <Route path="/register" element={<Registration />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/explore" element={<Explore />} />
         </Routes>
       </BrowserRouter>
     </div>

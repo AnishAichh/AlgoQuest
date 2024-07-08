@@ -1,11 +1,11 @@
 import React from 'react'
-import RegisterBgImage from "../components/shared/registration/registerBgImage";
-import Form from "../components/shared/registration/Form";
+import RegisterBgImage from "../components/Shared/registration/registerBgImage";
+import Form from "../components/Shared/registration/Form";
 
 function Registration() {
     return (
         <div>
-             <RegisterBgImage />
+            <RegisterBgImage />
             <div className='text-white px-20'>
                 <div className="w-5/6 mx-auto relative z-10">
                     <h2 className="py-8"><span className="font-bold text-2xl">J</span>QUEST</h2>

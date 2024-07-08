@@ -1,18 +1,53 @@
-import { Box, List, ListItem } from "@chakra-ui/react";
+import { Box, List, Table, TableContainer, Tbody, Th, Thead, Tr, Td } from "@chakra-ui/react";
 import { questions } from "../constants/data";
 import { Link } from "react-router-dom";
 
 function QuestionList() {
+    const getDifficultyClass = (difficulty) => {
+        switch (difficulty) {
+            case 'Easy':
+                return 'text-green-400';
+            case 'Medium':
+                return 'text-yellow-300';
+            case 'Hard':
+                return 'text-red-400';
+            default:
+                return '';
+        }
+    };
     return (
-        <Box>
+        <Box className="w-5/6 mx-auto">
             <List className="text-white">
-                {questions.map((question) => (
-                    <ListItem key={question.id}>
-                        <Link to={`/compiler/${question.id}`}>
-                            {question.title}
-                        </Link>
-                    </ListItem>
-                ))}
+                <TableContainer>
+                    <Table variant='simple'>
+                        <Thead>
+                            <Tr>
+                                <Th>Status</Th>
+                                <Th>Title</Th>
+                                <Th>Solution</Th>
+                                <Th>Acceptance</Th>
+                                <Th>Difficulty</Th>
+                            </Tr>
+                        </Thead>
+                        <Tbody>
+                            {questions.map((question) => (
+                                <Tr key={question.id}>
+                                    <Td>
+                                        {question.status}
+                                    </Td>
+                                    <Td>
+                                        <Link to={`/compiler/${question.id}`}>{question.title}</Link>
+                                    </Td>
+                                    <Td>
+                                        <Link to={``}>{typeof question.solution === 'object' ? question.solution.text : question.solution}</Link>
+                                    </Td>
+                                    <Td>{question.acceptance}</Td>
+                                    <Td className={`${getDifficultyClass(question.difficulty)}`}>{question.difficulty}</Td>
+                                </Tr>
+                            ))}
+                        </Tbody>
+                    </Table>
+                </TableContainer>
             </List>
         </Box>
     );

@@ -309,7 +309,7 @@ export const questions = [
 import icon1 from '../assets/card1_img1.jpg'
 import icon2 from '../assets/card1_img2.png'
 import icon3 from '../assets/card1_img3.jpg'
-import icon4 from '../assets/card1_img4.png'
+import icon4 from '../assets/card1_img4.jpg'
 
 import icon5 from '../assets/card2_img1.jpg'
 import icon6 from '../assets/card2_img2.png'
@@ -324,29 +324,10 @@ import icon12 from '../assets/card3_img4.jpg'
 export const CardData1 = [
     {
         id: 1, 
-        title: "", 
+        title: "DSA", 
         img: icon1, 
-        link:""
-    },
-    {
-        id: 2, 
-        title: "", 
-        img: icon2, 
-        link:""
-    },
-    {
-        id: 3, 
-        title: "", 
-        img: icon3, 
-        link:""
-    },
-    {
-        id: 4, 
-        title: "", 
-        img: icon4, 
-        link: ""
+        link:"/problem"
     }
-
 ]
 
 export const CardData2 = [

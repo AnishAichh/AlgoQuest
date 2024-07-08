@@ -31,7 +31,7 @@ function QuestionList() {
                         </Thead>
                         <Tbody>
                             {questions.map((question) => (
-                                <Tr key={question.id}>
+                                <Tr key={question.id} className="hover:bg-gray-900">
                                     <Td>
                                         {question.status}
                                     </Td>

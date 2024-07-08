@@ -7,9 +7,9 @@ import Body from '../components/shared/explore/body'
 function Explore() {
     return (
         <div className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>
-            <Navbar/>
-            <Header/>
-            <Body/>
+            <Navbar />
+            <Header />
+            <Body />
         </div>
     )
 }

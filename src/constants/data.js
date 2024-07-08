@@ -310,87 +310,78 @@ export const questions = [
 import icon1 from '../assets/card1_img1.jpg'
 import icon2 from '../assets/card1_img2.png'
 import icon3 from '../assets/card1_img3.jpg'
-import icon4 from '../assets/card1_img4.png'
+import icon4 from '../assets/card1_img4.jpg'
+
+import icon5 from '../assets/card2_img1.jpg'
+import icon6 from '../assets/card2_img2.png'
+import icon7 from '../assets/card2_img3.jpg'
+import icon8 from '../assets/card2_img4.png'
+
+import icon9 from '../assets/card3_img1.png'
+import icon10 from '../assets/card3_img2.jpg'
+import icon11 from '../assets/card3_img3.jpg'
+import icon12 from '../assets/card3_img4.jpg'
 
 export const CardData1 = [
     {
-        id: 1,
-        title: "HTML and CSS",
-        img: icon1,
-        link: "https://www.youtube.com/watch?v=mU6anWqZJcc"
-    },
-    {
-        id: 2,
-        title: "JavaScript",
-        img: icon2,
-        link: "https://www.youtube.com/watch?v=W6NZfCO5SIk"
-    },
-    {
-        id: 3,
-        title: "Frontend Framework (React)",
-        img: icon3,
-        link: "https://www.youtube.com/watch?v=w7ejDZ8SWv8"
-    },
-    {
-        id: 4,
-        title: "Backend Development (Node.js)",
-        img: icon4,
-        link: "https://www.youtube.com/watch?v=RLtyhwFtXQA"
+        id: 1, 
+        title: "DSA", 
+        img: icon1, 
+        link:"/problem"
     }
-
 ]
 
 export const CardData2 = [
     {
-        id: 1,
-        title: "",
-        img: "",
-        link: ""
+        id: 1, 
+        title: "HTML and CSS", 
+        img: icon5, 
+        link:"https://www.youtube.com/watch?v=mU6anWqZJcc"
     },
     {
-        id: 2,
-        title: "",
-        img: "",
-        link: ""
+        id: 2, 
+        title: "JavaScript", 
+        img: icon6, 
+        link:"https://www.youtube.com/watch?v=W6NZfCO5SIk"
     },
     {
-        id: 3,
-        title: "",
-        img: "",
-        link: ""
+        id: 3, 
+        title: "Frontend Framework (React)", 
+        img: icon7, 
+        link:"https://www.youtube.com/watch?v=w7ejDZ8SWv8"
     },
     {
-        id: 4,
-        title: "",
-        img: "",
-        link: ""
+        id: 4, 
+        title: "Backend Development (Node.js)", 
+        img: icon8, 
+        link:"https://www.youtube.com/watch?v=RLtyhwFtXQA"
     }
 
 ]
 export const CardData3 = [
     {
-        id: 1,
-        title: "",
-        img: "",
-        link: ""
+        id: 1, 
+        title: "BEST JAVASCRIPT INTERVIEW", 
+        img: icon9, 
+        link:"https://www.youtube.com/watch?v=QmfyWw3Cth8"
     },
     {
-        id: 2,
-        title: "",
-        img: "",
-        link: ""
+        id: 2, 
+        title: "DSA MOCK INTERVIEW", 
+        img: icon10, 
+        link:"https://www.youtube.com/watch?v=cyJM2khzIA4"
     },
     {
-        id: 3,
-        title: "",
-        img: "",
-        link: ""
+        id: 3, 
+        title: "Java Mock Interview for Freshers", 
+        img: icon11, 
+        link:"https://www.youtube.com/watch?v=UdRza_PDCeU"
     },
     {
-        id: 4,
-        title: "",
-        img: "",
-        link: ""
+        id: 4, 
+        title: "Next.JS Mock Interview", 
+        img: icon12, 
+        link:"https://www.youtube.com/watch?app=desktop&v=6FFO-Cz1lhU"
     }
 
 ]

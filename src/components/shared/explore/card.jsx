@@ -8,7 +8,6 @@ const Card = ({ title, img, link }) => {
           <img className='w-full h-48 ' src={img} alt={title} />
         </a>
         <div className='bg-indigo-800 p-2'>{title}</div>
-
       </div>
     </div>
   )

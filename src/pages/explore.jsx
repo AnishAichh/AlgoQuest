@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../components/Shared/explore/navbar'
-import Header from '../components/Shared/explore/heading'
-import Body from '../components/Shared/explore/body'
+import Navbar from '../components/shared/explore/navbar'
+import Header from '../components/shared/explore/heading'
+import Body from '../components/shared/explore/body'
 
 
 function Explore() {

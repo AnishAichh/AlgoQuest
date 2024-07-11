@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import img from '../../../assets/explore-img/image.png';
-import { auth } from "../../../firebase"; // Assuming `auth` is exported from your firebase.js
-
+import { auth } from "../../../firebase"; 
 function Profile() {
   const [userDetails, setUserDetails] = useState(null);
 
@@ -9,7 +8,7 @@ function Profile() {
     auth.onAuthStateChanged(async (user) => {
       if (user) {
         console.log(user);
-        // You can fetch additional user details from Firestore or other services here if needed
+        
         setUserDetails({
           displayName: user.displayName,
           email: user.email,
@@ -44,7 +43,7 @@ function Profile() {
               <div className=''>
                 <div className='py-4'>
                   <div className='text-4xl font-bold py-4'>
-                    Welcome {userDetails.displayName || ''} !! {/* Display user's display name */}
+                    Welcome {userDetails.displayName || ''} !! 
                   </div>
                   <div className='text-lg text-justify'>
                     A premier destination for coding enthusiasts and aspiring software developers. Our platform is dedicated to providing a comprehensive environment for enhancing your coding skills, mastering algorithms, and preparing for technical interviews.
@@ -62,7 +61,7 @@ function Profile() {
                 <div className='text-4xl font-bold py-4'>
                   Happy Coding !!
                 </div>
-                <button className="btn btn-primary" onClick={handleLogout}>
+                <button className="btn btn-primary" onClick={handleLogout} style={{background:"blue"}}>
             Logout
           </button>
               </div>

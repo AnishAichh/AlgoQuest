@@ -1,5 +1,6 @@
 import React from 'react'
-import Navbar from '../components/shared/explore/navbar'
+import Navbar from '../components/shared/Header/Navbar'
+
 import Header from '../components/shared/explore/heading'
 import Body from '../components/shared/explore/body'
 

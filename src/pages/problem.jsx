@@ -5,7 +5,7 @@ function Problem() {
     return (
         <div>
             {/* <Navbar /> */}
-            {/* Section 1  */}
+            {/* Section 1  */} 
             <QuestionList />
             {/* Section 3  */}
         </div>

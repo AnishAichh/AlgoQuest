@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Routes> 
+        <Routes>
           <Route path="/problem" element={<Problem />} />
           <Route path="/compiler/:questionId" Component={Compiler} />
           <Route path="/register" element={<Registration />} />

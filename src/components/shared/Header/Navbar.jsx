@@ -8,9 +8,9 @@ export default function Navbar() {
                 J<span className='text-lg text-yellow-400'>QUEST</span>
             </div>
             <div className='flex items-center gap-6'>
-                <Link to='./about' className='hover:text-yellow-400 transition duration-300'>About</Link>
-                <Link to='./explore' className='hover:text-yellow-400 transition duration-300'>Explore</Link>
-                <Link to='./problems' className='hover:text-yellow-400 transition duration-300'>Problems</Link>
+                <a href="/explore">Explore</a>
+                <a href="problems">Problems</a>
+                
             </div>
             <div>
                 <button type='button' className='flex items-center justify-center w-10 h-10 rounded-full bg-yellow-400 hover:bg-yellow-500 transition duration-300'>

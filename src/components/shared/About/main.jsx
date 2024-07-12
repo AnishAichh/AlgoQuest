@@ -61,9 +61,7 @@ function Profile() {
                 <div className='text-4xl font-bold py-4'>
                   Happy Coding !!
                 </div>
-                <button className="btn btn-primary" onClick={handleLogout} style={{background:"blue"}}>
-            Logout
-          </button>
+              
               </div>
               <div className=''>
                 <div className='my-3 max-w-lg' >

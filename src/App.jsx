@@ -29,11 +29,11 @@ function App() {
           <Route path="/Aboutproblems" element={<Problem />} />
           <Route path="/compiler/:questionId" element={<Compiler />} />
           <Route path="/About" element={<About />} />
-          <Route path="/about/explore" element={<Explore />} />
+          <Route path="/explore" element={<Explore />} />
           <Route path="/login" element={<SignIn />} />
           <Route path="/registerr" element={<Register />} />
           <Route path="/" element={<Navigate to="/login" />} />
-          <Route path="/About/problems" element={<Problem />} />
+          <Route path="/problems" element={<Problem />} />
 
         </Routes>
       </BrowserRouter>

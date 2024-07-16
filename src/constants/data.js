@@ -327,7 +327,7 @@ export const CardData1 = [
         id: 1, 
         title: "DSA", 
         img: icon1, 
-        link:"/About/problems"
+        link:"/problems"
     }
 ]
 

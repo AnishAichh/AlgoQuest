@@ -4,7 +4,7 @@ import Navbar from '../components/shared/Header/Navbar'
 import Main from '../components/shared/About/main'
 export default function About() {
     return (
-        <Box className='bg-gradient-to-r from-cyan-300 to-blue-900 min-h-screen'>
+        <Box className=' min-h-screen' style={{background:"#1a1a2e"}}>
             <Navbar />
             <Main />
         </Box>

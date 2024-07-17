@@ -1,12 +1,13 @@
 import React from 'react'
-import Navbar from '../components/shared/explore/navbar'
+import Navbar from '../components/shared/Header/Navbar'
+
 import Header from '../components/shared/explore/heading'
 import Body from '../components/shared/explore/body'
 
 
 function Explore() {
     return (
-        <div className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white'>
+        <div className=' text-white'>
             <Navbar />
             <Header />
             <Body />

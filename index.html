@@ -1,16 +1,32 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    
-    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script src="https://mediafiles.botpress.cloud/0568d434-4f5b-4908-a0e8-5efc40a4166d/webchat/config.js" defer></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + React</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+  <script>
+    window.botpressWebChat.init({
+      host: 'https://cdn.botpress.cloud/webchat/v1',
+      botId: '0568d434-4f5b-4908-a0e8-5efc40a4166d'
+    });
+  </script>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/0568d434-4f5b-4908-a0e8-5efc40a4166d/webchat/config.js" defer>
+
+    document.getElementById('chatbot-button').addEventListener('click', function () {
+      window.botpressWebChat.sendEvent({ type: 'show' });
+    });
+
+  </script>
+</body>
+
 </html>

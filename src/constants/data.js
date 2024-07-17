@@ -308,9 +308,9 @@ export const questions = [
 
 
 import icon1 from '../assets/card1_img1.jpg'
-import icon2 from '../assets/card1_img2.png'
-import icon3 from '../assets/card1_img3.jpg'
-import icon4 from '../assets/card1_img4.jpg'
+// import icon2 from '../assets/card1_img2.png'
+// import icon3 from '../assets/card1_img3.jpg'
+// import icon4 from '../assets/card1_img4.jpg'
 
 import icon5 from '../assets/card2_img1.jpg'
 import icon6 from '../assets/card2_img2.png'

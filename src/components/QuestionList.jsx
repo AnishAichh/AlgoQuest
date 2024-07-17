@@ -1,8 +1,10 @@
 import { Box, List, Table, TableContainer, Tbody, Th, Thead, Tr, Td } from "@chakra-ui/react";
-import { questions } from "../constants/data";
+import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 
 function QuestionList() {
+    const questions = useSelector((state) => state.questions.questions);
+
     const getDifficultyClass = (difficulty) => {
         switch (difficulty) {
             case 'Easy':
@@ -15,6 +17,7 @@ function QuestionList() {
                 return '';
         }
     };
+
     return (
         <Box className="w-5/6 mx-auto">
             <List className="text-white">

@@ -4,14 +4,14 @@ import { useEffect, useRef, useState } from "react";
 import LanguageSelector from "./LanguageSelector";
 import { CODE_SNIPPETS } from "../constants/data";
 import Output from "./Output";
-const CodeEditor = ({ questionId }) => {
 
+const CodeEditor = ({ questionId }) => {
     const editorRef = useRef(null);
-    const [value, setValue] = useState("")
-    const [language, setLanguage] = useState('javascript')
+    const [value, setValue] = useState("");
+    const [language, setLanguage] = useState('javascript');
 
     useEffect(() => {
-        const questionCode = CODE_SNIPPETS[questionId] ? CODE_SNIPPETS[questionId][language] : '';
+        const questionCode = CODE_SNIPPETS[questionId] ? CODE_SNIPPETS[questionId][language].code : '';
         setValue(questionCode || ' ');
     }, [questionId, language]);
 
@@ -20,12 +20,12 @@ const CodeEditor = ({ questionId }) => {
         editor.focus();
     };
 
-
     const onSelect = (language) => {
         setLanguage(language);
-        const questionCode = CODE_SNIPPETS[questionId] ? CODE_SNIPPETS[questionId][language] : '';
+        const questionCode = CODE_SNIPPETS[questionId] ? CODE_SNIPPETS[questionId][language].code : '';
         setValue(questionCode || '');
     };
+
     return (
         <Box>
             <HStack className="space-x-4">
@@ -35,24 +35,15 @@ const CodeEditor = ({ questionId }) => {
                         theme="vs-dark"
                         height="75vh"
                         language={language}
-                        onMount={
-                            onMount
-                        }
-                        //In React, the onMount function in the Monaco Editor is used to handle events emitted by the editor and interact with it programmatically. For example, you can use the onMount function to invoke instance methods or log information about the Monaco instance:
-                        // Handle events
-                        // You can use the onMount function to handle events emitted by the editor, such as when content changes.
-                        // Interact programmatically
-                        // You can use the onMount function to invoke instance methods to interact with the editor programmatically. For example, you can use the onMount function to create a binding.
-                        // Log information
-                        // You can use the onMount function to log information about the Monaco instance. For example, you can use the onMount function to log the Monaco instance before mounting. 
                         value={value}
+                        onMount={onMount}
                         onChange={(value) => setValue(value)}
                     />
                 </Box>
-                <Output editorRef={editorRef} language={language} />
+                <Output editorRef={editorRef} language={language} questionId={questionId} />
             </HStack>
-
         </Box>
     )
 }
+
 export default CodeEditor;

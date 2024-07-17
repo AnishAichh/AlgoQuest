@@ -8,7 +8,8 @@ export const LANGUAGE_VERSIONS = {
 }
 export const CODE_SNIPPETS = {
     1: {
-        javascript: `
+        javascript: {
+            code: `
 function twoSum(nums, target) {
     for (let i = 0; i < nums.length; i++) {
         for (let j = i + 1; j < nums.length; j++) {
@@ -18,11 +19,13 @@ function twoSum(nums, target) {
         }
     }
     return [];
-}
+} 
 
 console.log(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
-`,
-        typescript: `
+`, output: '[0, 1]'
+        },
+        typescript: {
+            code: `
 type Params = {
     nums: number[];
     target: number;
@@ -41,7 +44,8 @@ function twoSum(data: Params): number[] {
 }
 
 console.log(twoSum({ nums: [2, 7, 11, 15], target: 9 })); // Output: [0, 1]
-`,
+`, output: '[0, 1]'
+        },
         python: `
 def two_sum(nums, target):
     for i in range(len(nums)):
@@ -324,64 +328,64 @@ import icon12 from '../assets/card3_img4.jpg'
 
 export const CardData1 = [
     {
-        id: 1, 
-        title: "DSA", 
-        img: icon1, 
-        link:"/problems"
+        id: 1,
+        title: "DSA",
+        img: icon1,
+        link: "/problems"
     }
 ]
 
 export const CardData2 = [
     {
-        id: 1, 
-        title: "HTML and CSS", 
-        img: icon5, 
-        link:"https://www.youtube.com/watch?v=mU6anWqZJcc"
+        id: 1,
+        title: "HTML and CSS",
+        img: icon5,
+        link: "https://www.youtube.com/watch?v=mU6anWqZJcc"
     },
     {
-        id: 2, 
-        title: "JavaScript", 
-        img: icon6, 
-        link:"https://www.youtube.com/watch?v=W6NZfCO5SIk"
+        id: 2,
+        title: "JavaScript",
+        img: icon6,
+        link: "https://www.youtube.com/watch?v=W6NZfCO5SIk"
     },
     {
-        id: 3, 
-        title: "Frontend Framework (React)", 
-        img: icon7, 
-        link:"https://www.youtube.com/watch?v=w7ejDZ8SWv8"
+        id: 3,
+        title: "Frontend Framework (React)",
+        img: icon7,
+        link: "https://www.youtube.com/watch?v=w7ejDZ8SWv8"
     },
     {
-        id: 4, 
-        title: "Backend Development (Node.js)", 
-        img: icon8, 
-        link:"https://www.youtube.com/watch?v=RLtyhwFtXQA"
+        id: 4,
+        title: "Backend Development (Node.js)",
+        img: icon8,
+        link: "https://www.youtube.com/watch?v=RLtyhwFtXQA"
     }
 
 ]
 export const CardData3 = [
     {
-        id: 1, 
-        title: "BEST JAVASCRIPT INTERVIEW", 
-        img: icon9, 
-        link:"https://www.youtube.com/watch?v=QmfyWw3Cth8"
+        id: 1,
+        title: "BEST JAVASCRIPT INTERVIEW",
+        img: icon9,
+        link: "https://www.youtube.com/watch?v=QmfyWw3Cth8"
     },
     {
-        id: 2, 
-        title: "DSA MOCK INTERVIEW", 
-        img: icon10, 
-        link:"https://www.youtube.com/watch?v=cyJM2khzIA4"
+        id: 2,
+        title: "DSA MOCK INTERVIEW",
+        img: icon10,
+        link: "https://www.youtube.com/watch?v=cyJM2khzIA4"
     },
     {
-        id: 3, 
-        title: "Java Mock Interview for Freshers", 
-        img: icon11, 
-        link:"https://www.youtube.com/watch?v=UdRza_PDCeU"
+        id: 3,
+        title: "Java Mock Interview for Freshers",
+        img: icon11,
+        link: "https://www.youtube.com/watch?v=UdRza_PDCeU"
     },
     {
-        id: 4, 
-        title: "Next.JS Mock Interview", 
-        img: icon12, 
-        link:"https://www.youtube.com/watch?app=desktop&v=6FFO-Cz1lhU"
+        id: 4,
+        title: "Next.JS Mock Interview",
+        img: icon12,
+        link: "https://www.youtube.com/watch?app=desktop&v=6FFO-Cz1lhU"
     }
 
 ]

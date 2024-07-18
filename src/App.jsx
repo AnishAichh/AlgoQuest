@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Compiler from "./pages/compiler";
 import Problem from "./pages/problem";
-// import About from "./pages/about";
-import { About } from "./pages";
+import About from "./pages/about";
 import Explore from "./pages/explore";
-import SignIn from "./components/organisms/Login/SignIn";
-import Register from "./components/organisms/register/registration";
+import SignIn from "./components/shared/Login/SignIn";
+import Register from "./components/shared/register/registration";
 import { auth } from "./firebase";
 
 function App() {

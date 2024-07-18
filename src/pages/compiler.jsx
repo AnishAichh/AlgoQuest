@@ -1,7 +1,7 @@
 import { Box, Code } from "@chakra-ui/react"
 import CodeEditor from "../components/CodeEditor"
 import { useParams } from "react-router-dom";
-import Navbar from '../components/organisms/Header/Navbar'
+import Navbar from '../components/shared/Header/Navbar'
 export default function Compiler() {
     const { questionId } = useParams();
     return (

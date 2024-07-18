@@ -46,7 +46,8 @@ function twoSum(data: Params): number[] {
 console.log(twoSum({ nums: [2, 7, 11, 15], target: 9 })); // Output: [0, 1]
 `, output: '[0, 1]'
         },
-        python: `
+        python: {
+            code: `
 def two_sum(nums, target):
     for i in range(len(nums)):
         for j in range(i + 1, len(nums)):
@@ -55,7 +56,8 @@ def two_sum(nums, target):
     return []
 
 print(two_sum([2, 7, 11, 15], 9)) # Output: [0, 1]
-`,
+`, output: '[0, 1]'
+        },
         java: `
 import java.util.*;
 
@@ -312,9 +314,9 @@ export const questions = [
 
 
 import icon1 from '../assets/card1_img1.jpg'
-import icon2 from '../assets/card1_img2.png'
-import icon3 from '../assets/card1_img3.jpg'
-import icon4 from '../assets/card1_img4.jpg'
+// import icon2 from '../assets/card1_img2.png'
+// import icon3 from '../assets/card1_img3.jpg'
+// import icon4 from '../assets/card1_img4.jpg'
 
 import icon5 from '../assets/card2_img1.jpg'
 import icon6 from '../assets/card2_img2.png'

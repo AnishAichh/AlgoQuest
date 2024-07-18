@@ -1,6 +1,6 @@
 import React from 'react'
 import QuestionList from '../components/QuestionList'
-import Navbar from '../components/Shared/Header/Navbar';
+import Navbar from '../components/shared/Header/Navbar';
 
 function Problem() {
     return (

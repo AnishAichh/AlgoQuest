@@ -4,8 +4,8 @@ import Compiler from "./pages/compiler";
 import Problem from "./pages/problem";
 import About from "./pages/about";
 import Explore from "./pages/explore";
-import SignIn from "./components/Shared/Login/SignIn";
-import Register from "./components/Shared/register/register";
+import SignIn from "./components/shared/Login/SignIn";
+import Register from "./components/shared/register/registration";
 import { auth } from "./firebase";
 
 function App() {
@@ -26,8 +26,10 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/Aboutproblems" element={<Problem />} />
+      
           <Route path="/compiler/:questionId" element={<Compiler />} />
+          <Route path="/compiler/problems" element={<Problem />} />
+
           <Route path="/About" element={<About />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/login" element={<SignIn />} />

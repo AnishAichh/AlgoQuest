@@ -1,11 +1,13 @@
-import { Box, List, Table, TableContainer, Tbody, Th, Thead, Tr, Td, Select } from "@chakra-ui/react";
+import { Box, List, Table, TableContainer, Tbody, Th, Thead, Tr, Td, Select, Input, InputGroup, InputLeftElement, Flex } from "@chakra-ui/react";
 import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import { useState } from 'react';
+import { SearchIcon } from '@chakra-ui/icons';
 
 function QuestionList() {
     const questions = useSelector((state) => state.questions.questions);
     const [sortOrder, setSortOrder] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
 
     const getDifficultyClass = (difficulty) => {
         switch (difficulty) {
@@ -29,15 +31,7 @@ function QuestionList() {
     const sortQuestions = (questions, order) => {
         if (order) {
             return [...questions].sort((a, b) => {
-                if (order === "Easy") {
-                    return difficultyOrder[a.difficulty] - difficultyOrder[b.difficulty];
-                } else if (order === "Medium") {
-                    return difficultyOrder[a.difficulty] === 2 ? -1 : 1;
-                } else if (order === "Hard") {
-                    return difficultyOrder[b.difficulty] - difficultyOrder[a.difficulty];
-                } else {
-                    return 0;
-                }
+                return difficultyOrder[a.difficulty] - difficultyOrder[b.difficulty];
             });
         }
         return questions;
@@ -47,15 +41,40 @@ function QuestionList() {
         setSortOrder(e.target.value);
     };
 
-    const sortedQuestions = sortQuestions(questions, sortOrder);
+    const handleSearchChange = (e) => {
+        setSearchTerm(e.target.value);
+    };
+
+    const filteredQuestions = questions.filter(question =>
+        question.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    const sortedQuestions = sortQuestions(filteredQuestions, sortOrder);
 
     return (
         <Box className="w-5/6 mx-auto">
-            <Select onChange={handleSortChange} placeholder="Difficulty" mb={4} className="text-white bg-gray-800">
-                <option value="Easy" className="text-black">Easy</option>
-                <option value="Medium" className="text-black">Medium</option>
-                <option value="Hard" className="text-black">Hard</option>
-            </Select>
+            <Flex mb={4} align="center" justifyContent="space-between">
+                <Select 
+                    onChange={handleSortChange} 
+                    placeholder="Difficulty" 
+                    className="text-white bg-gray-800" 
+                    width="150px"
+                >
+                    <option value="Easy" className="text-black">Easy</option>
+                    <option value="Medium" className="text-black">Medium</option>
+                    <option value="Hard" className="text-black">Hard</option>
+                </Select>
+                <InputGroup width="400px">
+                    <InputLeftElement pointerEvents="none">
+                        <SearchIcon color="gray.300" />
+                    </InputLeftElement>
+                    <Input 
+                        placeholder="Search questions" 
+                        onChange={handleSearchChange} 
+                        className="text-white bg-gray-800"
+                    />
+                </InputGroup>
+            </Flex>
             <List className="text-white">
                 <TableContainer>
                     <Table variant='simple'>

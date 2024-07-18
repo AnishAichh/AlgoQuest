@@ -1,13 +1,13 @@
-import React from 'react'
-import Body from '../components/Shared/Explore/body'
-import Navbar from '../components/Shared/Header/Navbar'
+import React from 'react';
+import Body from "../components/shared/explore/body";
+import Navbar from '../components/shared/Header/Navbar';
 
 
 function Explore() {
     return (
         <div className=' text-white'>
-            <Navbar />
-            <Body />
+            <Navbar/>
+            <Body/>
         </div>
     )
 }

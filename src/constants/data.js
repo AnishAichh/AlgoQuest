@@ -1,15 +1,15 @@
 export const LANGUAGE_VERSIONS = {
-    javascript: "18.15.0",
-    typescript: "5.0.3",
-    python: "3.10.0",
-    java: " 15.0.2",
-    csharp: "6.12.0",
-    php: "8.2.3",
-}
+  javascript: "18.15.0",
+  typescript: "5.0.3",
+  python: "3.10.0",
+  java: " 15.0.2",
+  csharp: "6.12.0",
+  php: "8.2.3",
+};
 export const CODE_SNIPPETS = {
-    1: {
-        javascript: {
-            code: `
+  1: {
+    javascript: {
+      code: `
 function twoSum(nums, target) {
     for (let i = 0; i < nums.length; i++) {
         for (let j = i + 1; j < nums.length; j++) {
@@ -22,10 +22,11 @@ function twoSum(nums, target) {
 } 
 
 console.log(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
-`, output: '[0, 1]'
-        },
-        typescript: {
-            code: `
+`,
+      output: "[0, 1]",
+    },
+    typescript: {
+      code: `
 type Params = {
     nums: number[];
     target: number;
@@ -44,10 +45,11 @@ function twoSum(data: Params): number[] {
 }
 
 console.log(twoSum({ nums: [2, 7, 11, 15], target: 9 })); // Output: [0, 1]
-`, output: '[0, 1]'
-        },
-        python: {
-            code: `
+`,
+      output: "[0, 1]",
+    },
+    python: {
+      code: `
 def two_sum(nums, target):
     for i in range(len(nums)):
         for j in range(i + 1, len(nums)):
@@ -56,9 +58,11 @@ def two_sum(nums, target):
     return []
 
 print(two_sum([2, 7, 11, 15], 9)) # Output: [0, 1]
-`, output: '[0, 1]'
-        },
-        java: `
+`,
+      output: "[0, 1]",
+    },
+    java: {
+      code: `
 import java.util.*;
 
 public class TwoSum {
@@ -79,7 +83,11 @@ public class TwoSum {
     }
 }
 `,
-        csharp: `
+
+      output: "[0,1]",
+    },
+    csharp: {
+      code: `
 using System;
 
 namespace TwoSumApp {
@@ -102,7 +110,10 @@ namespace TwoSumApp {
     }
 }
 `,
-        php: `
+      output: "[0,1]",
+    },
+    php: {
+      code: `
 <?php
 
 function twoSum($nums, $target) {
@@ -120,29 +131,41 @@ print_r(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
 
 ?>
 `,
+      output: "[0,1]",
     },
-    2: {
-        javascript: `
+  },
+  2: {
+    javascript: {
+      code: `
 function reverseString(str) {
     return str.split('').reverse().join('');
 }
 
 console.log(reverseString("hello")); // Output: "olleh"
 `,
-        typescript: `
+      output: "olleh",
+    },
+    typescript: {
+      code: `
 function reverseString(str: string): string {
     return str.split('').reverse().join('');
 }
 
 console.log(reverseString("hello")); // Output: "olleh"
 `,
-        python: `
+      output: "olleh",
+    },
+    python: {
+      code: `
 def reverse_string(s):
     return s[::-1]
 
 print(reverse_string("hello")) # Output: "olleh"
 `,
-        java: `
+      output: "olleh",
+    },
+    java: {
+      code: `
 public class ReverseString {
     public static String reverseString(String s) {
         return new StringBuilder(s).reverse().toString();
@@ -153,7 +176,10 @@ public class ReverseString {
     }
 }
 `,
-        csharp: `
+      output: "olleh",
+    },
+    csharp: {
+      code: `
 using System;
 
 namespace ReverseStringApp {
@@ -170,7 +196,10 @@ namespace ReverseStringApp {
     }
 }
 `,
-        php: `
+      output: "olleh",
+    },
+    php: {
+      code: `
 <?php
 
 function reverseString($str) {
@@ -181,29 +210,41 @@ echo reverseString("hello"); // Output: "olleh"
 
 ?>
 `,
+      output: "olleh",
     },
-    3: {
-        javascript: `
+  },
+  3: {
+    javascript: {
+      code: `
 function sortArray(arr) {
     return arr.sort((a, b) => a - b);
 }
 
 console.log(sortArray([5, 3, 8, 4, 2])); // Output: [2, 3, 4, 5, 8]
 `,
-        typescript: `
+      output: "[2,3,4,5,8]",
+    },
+    typescript: {
+      code: `
 function sortArray(arr: number[]): number[] {
     return arr.sort((a, b) => a - b);
 }
 
 console.log(sortArray([5, 3, 8, 4, 2])); // Output: [2, 3, 4, 5, 8]
 `,
-        python: `
+      output: "[2, 3, 4, 5, 8]",
+    },
+    python: {
+      code: `
 def sort_array(arr):
     return sorted(arr)
 
 print(sort_array([5, 3, 8, 4, 2])) # Output: [2, 3, 4, 5, 8]
 `,
-        java: `
+      output: "[2, 3, 4, 5, 8]",
+    },
+    java: {
+      code: `
 import java.util.Arrays;
 
 public class SortArray {
@@ -218,7 +259,10 @@ public class SortArray {
     }
 }
 `,
-        csharp: `
+      output: "[2, 3, 4, 5, 8]",
+    },
+    csharp: {
+      code: `
 using System;
 using System.Linq;
 
@@ -236,7 +280,10 @@ namespace SortArrayApp {
     }
 }
 `,
-        php: `
+      output: "[2, 3, 4, 5, 8]",
+    },
+    php: {
+      code: `
 <?php
 
 function sortArray($arr) {
@@ -248,16 +295,22 @@ print_r(sortArray([5, 3, 8, 4, 2])); // Output: [2, 3, 4, 5, 8]
 
 ?>
 `,
+      output: "[2, 3, 4, 5, 8]",
     },
-    4: {
-        javascript: `
+  },
+  4: {
+    javascript: {
+      code: `
 function greet(name) {
     console.log("Hello, " + name + "!");
 }
 
 greet("Alex"); // Output: "Hello, Alex!"
 `,
-        typescript: `
+      output: "Hello, Alex!",
+    },
+    typescript: {
+      code: `
 type Params = {
     name: string;
 }
@@ -268,20 +321,26 @@ function greet(data: Params) {
 
 greet({ name: "Alex" }); // Output: "Hello, Alex!"
 `,
-        python: `
+      output: "Hello, Alex!",
+    },
+    python: {
+      code: `
 def greet(name):
     print("Hello, " + name + "!")
 
 greet("Alex") # Output: "Hello, Alex!"
 `,
-        java: `
+      java: `
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, Alex!"); // Fixed Output: "Hello, Alex!"
     }
 }
 `,
-        csharp: `
+      output: "Hello, Alex!",
+    },
+    csharp: {
+      code: `
 using System;
 
 namespace HelloWorld {
@@ -292,7 +351,10 @@ namespace HelloWorld {
     }
 }
 `,
-        php: `
+      output: "Hello, Alex!",
+    },
+    php: {
+      code: `
 <?php
 
 $name = 'Alex';
@@ -300,94 +362,116 @@ echo "Hello, " . $name . "!"; // Fixed Output: "Hello, Alex!"
 
 ?>
 `,
+      output: "Hello, Alex!",
     },
-}
+  },
+};
 
-import img from '../assets/problems-img/image.png'
+import img from "../assets/problems-img/image.png";
 export const questions = [
-    { id: 1, title: 'Two sum', solution: { img }, acceptance: "57.7%", difficulty: "Easy" },
-    { id: 2, title: 'reverse string', solution: { img }, acceptance: "57.7%", difficulty: "Medium" },
-    { id: 3, title: 'Sort the array', solution: { img }, acceptance: "57.7%", difficulty: "Easy" },
-    { id: 4, title: 'Fix the Code', solution: { img }, acceptance: "57.7%", difficulty: "Hard" }
-]
+  {
+    id: 1,
+    title: "Two sum",
+    solution: { img },
+    acceptance: "57.7%",
+    difficulty: "Easy",
+  },
+  {
+    id: 2,
+    title: "reverse string",
+    solution: { img },
+    acceptance: "57.7%",
+    difficulty: "Medium",
+  },
+  {
+    id: 3,
+    title: "Sort the array",
+    solution: { img },
+    acceptance: "57.7%",
+    difficulty: "Easy",
+  },
+  {
+    id: 4,
+    title: "Fix the Code",
+    solution: { img },
+    acceptance: "57.7%",
+    difficulty: "Hard",
+  },
+];
 
-
-
-import icon1 from '../assets/card1_img1.jpg'
+import icon1 from "../assets/card1_img1.jpg";
 // import icon2 from '../assets/card1_img2.png'
 // import icon3 from '../assets/card1_img3.jpg'
 // import icon4 from '../assets/card1_img4.jpg'
 
-import icon5 from '../assets/card2_img1.jpg'
-import icon6 from '../assets/card2_img2.png'
-import icon7 from '../assets/card2_img3.jpg'
-import icon8 from '../assets/card2_img4.png'
+import icon5 from "../assets/card2_img1.jpg";
+import icon6 from "../assets/card2_img2.png";
+import icon7 from "../assets/card2_img3.jpg";
+import icon8 from "../assets/card2_img4.png";
 
-import icon9 from '../assets/card3_img1.png'
-import icon10 from '../assets/card3_img2.jpg'
-import icon11 from '../assets/card3_img3.jpg'
-import icon12 from '../assets/card3_img4.jpg'
+import icon9 from "../assets/card3_img1.png";
+import icon10 from "../assets/card3_img2.jpg";
+import icon11 from "../assets/card3_img3.jpg";
+import icon12 from "../assets/card3_img4.jpg";
 
 export const CardData1 = [
-    {
-        id: 1,
-        title: "DSA",
-        img: icon1,
-        link: "/problems"
-    }
-]
+  {
+    id: 1,
+    title: "DSA",
+    img: icon1,
+    link: "/problems",
+  },
+];
 
 export const CardData2 = [
-    {
-        id: 1,
-        title: "HTML and CSS",
-        img: icon5,
-        link: "https://www.youtube.com/watch?v=mU6anWqZJcc"
-    },
-    {
-        id: 2,
-        title: "JavaScript",
-        img: icon6,
-        link: "https://www.youtube.com/watch?v=W6NZfCO5SIk"
-    },
-    {
-        id: 3,
-        title: "Frontend Framework (React)",
-        img: icon7,
-        link: "https://www.youtube.com/watch?v=w7ejDZ8SWv8"
-    },
-    {
-        id: 4,
-        title: "Backend Development (Node.js)",
-        img: icon8,
-        link: "https://www.youtube.com/watch?v=RLtyhwFtXQA"
-    }
-
-]
+  {
+    id: 1,
+    title: "HTML and CSS",
+    img: icon5,
+    link: "https://www.youtube.com/watch?v=mU6anWqZJcc",
+  },
+  {
+    id: 2,
+    title: "JavaScript",
+    img: icon6,
+    link: "https://www.youtube.com/watch?v=W6NZfCO5SIk",
+  },
+  {
+    id: 3,
+    title: "Frontend Framework (React)",
+    img: icon7,
+    link: "https://www.youtube.com/watch?v=w7ejDZ8SWv8",
+  },
+  {
+    id: 4,
+    title: "Backend Development (Node.js)",
+    img: icon8,
+    link: "https://www.youtube.com/watch?v=RLtyhwFtXQA",
+  },
+];
 export const CardData3 = [
-    {
-        id: 1,
-        title: "BEST JAVASCRIPT INTERVIEW",
-        img: icon9,
-        link: "https://www.youtube.com/watch?v=QmfyWw3Cth8"
-    },
-    {
-        id: 2,
-        title: "DSA MOCK INTERVIEW",
-        img: icon10,
-        link: "https://www.youtube.com/watch?v=cyJM2khzIA4"
-    },
-    {
-        id: 3,
-        title: "Java Mock Interview for Freshers",
-        img: icon11,
-        link: "https://www.youtube.com/watch?v=UdRza_PDCeU"
-    },
-    {
-        id: 4,
-        title: "Next.JS Mock Interview",
-        img: icon12,
-        link: "https://www.youtube.com/watch?app=desktop&v=6FFO-Cz1lhU"
-    }
-
-]
+  {
+    id: 1,
+    title: "BEST JAVASCRIPT INTERVIEW",
+    img: icon9,
+    link: "https://www.youtube.com/watch?v=QmfyWw3Cth8",
+  },
+  {
+    id: 2,
+    title: "DSA MOCK INTERVIEW",
+    img: icon10,
+    link: "https://www.youtube.com/watch?v=cyJM2khzIA4",
+  },
+  {
+    id: 3,
+    title: "Java Mock Interview for Freshers",
+    img: icon11,
+    link: "https://www.youtube.com/watch?v=UdRza_PDCeU",
+  },
+  {
+    id: 4,
+    title: "Next.JS Mock Interview",
+    img: icon12,
+    link: "https://www.youtube.com/watch?app=desktop&v=6FFO-Cz1lhU",
+  },
+];

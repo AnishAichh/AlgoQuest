@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from '../components/shared/Header/Navbar'
+import Navbar from '../components/organisms/Header/Navbar'
 
-import Header from '../components/shared/explore/heading'
-import Body from '../components/shared/explore/body'
+import Header from '../components/organisms/explore/heading'
+import Body from '../components/organisms/explore/body'
 
 
 function Explore() {

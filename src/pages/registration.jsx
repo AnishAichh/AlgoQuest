@@ -1,6 +1,6 @@
 import React from 'react'
-import Form from "../components/shared/registration/Form";
-import RegisterBgImage from '../components/shared/registration/registerBgImage';
+import Form from "../components/organisms/registration/Form";
+import RegisterBgImage from '../components/organisms/registration/registerBgImage';
 
 function Registration() {
     return (

@@ -59,13 +59,12 @@ function Output({ editorRef, language, questionId }) {
     };
 
     const verifyOutput = (questionId, output) => {
-        const expectedOutput = CODE_SNIPPETS[questionId][language]?.output || '';
+        const expectedOutput = CODE_SNIPPETS[questionId][language]?.output;
         try {
             const parsedOutput = JSON.parse(output);
             const parsedExpectedOutput = JSON.parse(expectedOutput);
             return JSON.stringify(parsedOutput) === JSON.stringify(parsedExpectedOutput);
         } catch (e) {
-            // If parsing fails, fall back to string comparison
             return output.trim() === expectedOutput.trim();
         }
     };

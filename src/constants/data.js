@@ -23,7 +23,7 @@ function twoSum(nums, target) {
 
 console.log(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
 `,
-      output: "[0, 1]",
+      output: "[ 0, 1 ]\n",
     },
     typescript: {
       code: `
@@ -84,7 +84,7 @@ public class TwoSum {
 }
 `,
 
-      output: "[0,1]",
+      output: "[0, 1]",
     },
     csharp: {
       code: `
@@ -110,7 +110,7 @@ namespace TwoSumApp {
     }
 }
 `,
-      output: "[0,1]",
+      output: "[0, 1]",
     },
     php: {
       code: `
@@ -131,7 +131,7 @@ print_r(twoSum([2, 7, 11, 15], 9)); // Output: [0, 1]
 
 ?>
 `,
-      output: "[0,1]",
+      output: "[0, 1]",
     },
   },
   2: {

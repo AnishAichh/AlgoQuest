@@ -34,7 +34,7 @@ function App() {
           <Route path="/registerr" element={<Register />} />
           <Route path="/" element={<Navigate to="/login" />} />
           <Route path="/problems" element={<Problem />} />
-
+          <Route path="/compiler/problems" element={<Problem />} />
         </Routes>
       </BrowserRouter>
     </div>

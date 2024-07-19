@@ -81,7 +81,7 @@ function QuestionList() {
                         </Thead>
                         <Tbody>
                             {sortedQuestions.map((question) => (
-                                <Tr key={question.id} className="hover:bg-gray-900">
+                                <Tr key={question.id} className="hover:bg-gray-800">
                                     <Td>{question.status}</Td>
                                     <Td>
                                         <Link to={`/compiler/${question.id}`}>{question.title}</Link>

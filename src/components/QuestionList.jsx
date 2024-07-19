@@ -6,7 +6,7 @@ import { SearchIcon } from '@chakra-ui/icons';
 
 function QuestionList() {
     const questions = useSelector((state) => state.questions.questions);
-    const [sortOrder, setSortOrder] = useState('');
+    const [difficultyFilter, setDifficultyFilter] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
 
     const getDifficultyClass = (difficulty) => {
@@ -22,23 +22,15 @@ function QuestionList() {
         }
     };
 
-    const difficultyOrder = {
-        Easy: 1,
-        Medium: 2,
-        Hard: 3,
-    };
-
-    const sortQuestions = (questions, order) => {
-        if (order) {
-            return [...questions].sort((a, b) => {
-                return difficultyOrder[a.difficulty] - difficultyOrder[b.difficulty];
-            });
+    const filterQuestions = (questions, difficulty) => {
+        if (difficulty) {
+            return questions.filter(question => question.difficulty === difficulty);
         }
         return questions;
     };
 
     const handleSortChange = (e) => {
-        setSortOrder(e.target.value);
+        setDifficultyFilter(e.target.value);
     };
 
     const handleSearchChange = (e) => {
@@ -49,15 +41,15 @@ function QuestionList() {
         question.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    const sortedQuestions = sortQuestions(filteredQuestions, sortOrder);
+    const sortedQuestions = filterQuestions(filteredQuestions, difficultyFilter);
 
     return (
         <Box className="w-5/6 mx-auto">
             <Flex mb={4} align="center" justifyContent="space-between">
-                <Select 
-                    onChange={handleSortChange} 
-                    placeholder="Difficulty" 
-                    className="text-white bg-gray-800" 
+                <Select
+                    onChange={handleSortChange}
+                    placeholder="Difficulty"
+                    className="text-white bg-white"
                     width="150px"
                 >
                     <option value="Easy" className="text-black">Easy</option>
@@ -68,9 +60,9 @@ function QuestionList() {
                     <InputLeftElement pointerEvents="none">
                         <SearchIcon color="gray.300" />
                     </InputLeftElement>
-                    <Input 
-                        placeholder="Search questions" 
-                        onChange={handleSearchChange} 
+                    <Input
+                        placeholder="Search questions"
+                        onChange={handleSearchChange}
                         className="text-white bg-gray-800"
                     />
                 </InputGroup>

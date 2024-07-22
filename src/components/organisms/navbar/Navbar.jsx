@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD:src/components/shared/Header/Navbar.jsx
-import { auth } from "../../../firebase";
-=======
-import { auth } from "../../../services/firebase/firebase"; 
->>>>>>> 979d90d95f9e0f4f790072443154e6df15750a21:src/components/organisms/navbar/Navbar.jsx
+import { auth } from "../../../services/firebase/firebase";
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

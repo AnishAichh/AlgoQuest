@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import Compiler from "./pages/compiler";
-import Problem from "./pages/problem";
-import About from "./pages/about";
-import Explore from './pages/explore';
-import SignIn from "./components/Shared/Login/SignIn";
-import Register from "./components/Shared/register/register"
-import { auth } from "./firebase";
+import {Compiler} from "./pages";
+import {Problem} from "./pages";
+import {About} from "./pages";
+import {Explore} from './pages';
+import {SignIn} from "./pages";
+import {Registration} from "./pages";
+import { auth } from "./services";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -31,7 +31,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/login" element={<SignIn />} />
-          <Route path="/registerr" element={<Register />} />
+          <Route path="/registerr" element={<Registration />} />
           <Route path="/" element={<Navigate to="/login" />} />
           <Route path="/problems" element={<Problem />} />
           <Route path="/compiler/problems" element={<Problem />} />

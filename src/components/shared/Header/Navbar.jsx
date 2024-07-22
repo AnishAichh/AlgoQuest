@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { auth } from "../../../firebase"; 
+import { auth } from "../../../firebase";
 
 export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     async function handleLogout() {
         try {
-          await auth.signOut();
-          window.location.href = "/login";
-          console.log("User logged out successfully!");
+            await auth.signOut();
+            window.location.href = "/login";
+            console.log("User logged out successfully!");
         } catch (error) {
-          console.error("Error logging out:", error.message);
+            console.error("Error logging out:", error.message);
         }
     }
-    
+
     return (
         <div className='text-white flex justify-between items-center w-5/6 mx-auto py-6'>
             <div className='text-2xl font-bold'>

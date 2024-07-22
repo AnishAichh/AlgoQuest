@@ -28,6 +28,10 @@ function App() {
         <Routes>
           <Route path="/Aboutproblems" element={<Problem />} />
           <Route path="/compiler/:questionId" element={<Compiler />} />
+          <Route path="/compiler/problems" element={<Problem />} />
+          <Route path="/question-list" element={<Problem />} />
+          
+
           <Route path="/About" element={<About />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/login" element={<SignIn />} />

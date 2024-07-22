@@ -1,4 +1,4 @@
-import { Box, Button, Text, useToast } from '@chakra-ui/react';
+import { Box, Button, useToast } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateQuestionStatus, selectQuestionById } from '../features/questionSlice';
 import { useState } from 'react';
@@ -71,30 +71,39 @@ function Output({ editorRef, language, questionId }) {
     };
 
     return (
-        <Box w='50%'>
-            <Text mb={4} fontSize='lg'> Output </Text>
-            <Button
-                variant='outline'
-                colorScheme='green'
-                mb={4}
-                onClick={runCode}
-                isLoading={isLoading}
-            >
-                Run code
-            </Button>
-            <Box
-                height='75vh'
-                p={2}
-                border='1px solid'
-                color={isError ? "red.400" : "white"}
-                borderRadius={4}
-                borderColor={isError ? "red.500" : "#333"}
-            >
-                {
-                    output ? output : "Click 'Run Code' to see the output here"
-                }
-            </Box>
+      <>
+        <Button
+          variant="outline"
+          colorScheme="green"
+          mb={2}
+          onClick={runCode}
+          isLoading={isLoading}
+          size="sm" // Smaller button size
+        >
+          Run code
+        </Button>
+
+        <Box
+          w="100%"
+          h= "200px"
+          display="flex"
+          flexDirection="column"
+          alignItems="stretch"
+        >
+          <Box
+            flex="1"
+            p={2}
+            border="1px solid"
+            color={isError ? "red.400" : "white"}
+            borderRadius={4}
+            borderColor={isError ? "red.500" : "#333"}
+            overflow="hidden"
+            minHeight="0"
+          >
+            {output ? output : "Click 'Run Code' to see the output here"}
+          </Box>
         </Box>
+      </>
     );
 }
 

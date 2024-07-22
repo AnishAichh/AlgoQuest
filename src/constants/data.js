@@ -303,6 +303,11 @@ echo "Hello, " . $name . "!"; // Fixed Output: "Hello, Alex!"
     },
 }
 
+export const QUESTION_DESCRIPTIONS = {
+    1: "Write a function that adds two numbers.",
+    // Other question descriptions...
+};
+
 import img from '../assets/problems-img/image.png'
 export const questions = [
     { id: 1, title: 'Two sum', solution: { img }, acceptance: "57.7%", difficulty: "Easy" },

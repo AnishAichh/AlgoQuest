@@ -6,7 +6,6 @@ import { CODE_SNIPPETS } from '../constants/data';
 import { excuteCode } from './api';
 
 function Output({ editorRef, language, questionId }) {
-
     const toast = useToast();
     const dispatch = useDispatch();
     const question = useSelector((state) => selectQuestionById(state, questionId));
